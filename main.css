@@ -1,0 +1,261 @@
+    /*Pour reset les marges*/
+
+    *{
+    margin: 0;
+    }
+    
+    /*Ordonner la ligne directrice: 
+    il s'agit de régler les mêmes caractéristiques sur l'ensemble des éléments à savoir:
+    la police, l'alignenment et la trame de fond*/
+    
+    #wrapper{
+        padding : 0 15%;
+        text-align: center;
+        font-family: system-ui, system-ui, sans-serif;
+        background: yellow;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /*Contient les améliorations pour la partie qui contient le titre principale et l'image*/
+    /*Pour changer la mise en forme du titre principale:
+    couleur,trame de fond, forme de la police et position*/
+    
+    
+    
+    /*Contient le titre principale et l'image. Méthode pour agencer les deux éléments*/
+    
+    header{
+        display: flex;
+        flex-direction: column; 
+        background-color: blueviolet;
+        text-align: center;
+        width: 100%;
+    }
+    h3{
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2em;
+    }
+    /*Pour changer la taille et mettre des bordures en haut et en bas*/
+
+    .famille{
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;   
+    }
+    /*Contient les améliorations pour la section qui contient le coeur de la page*/
+    /*Pour changer la couleur de fond et le positionnement des éléments contenus dans la balise MAIN*/
+
+    main{
+        background: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;  
+    }
+    p{
+        text-align: justify;
+        padding-bottom: 20px;
+    }
+    /*Pour changer la couleur de la police et l'apparence des liens en enlevant le surlignement*/
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+         
+    }
+    /*Pour changer la mise en forme du conteneur (contient les liens de navigation)*/
+    .menu{
+        width: 100%;
+    }
+    ul{
+        background: blueviolet;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 2px white dashed; 
+        padding-right: 40px; 
+    }
+    /* Pour changer le positionnement du texte dans un conteneur*/
+    li{
+        padding: 20px;
+    }
+    /*Pour mettre en forme le titre et son texte*/
+    h1{
+        color: yellow;
+        text-align: left;
+        font-size: 2em; 
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    article{
+        text-align: justify;
+        padding: 0px 30px 20px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Pour afficher et améliorer le bloc de 3 images */
+    
+    /*Pour améliorer le design du tableau comme faire apparaitre les bordures*/
+    section{
+        display: flex;
+        flex-direction: row;
+    }
+    .bloc3{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 20px;
+         
+    }
+    .bloc{
+        border: 2px solid gray; 
+        width: 50%;
+        margin: 5px;
+    }
+    /*Pour mettre en forme la partie contenant l'image et la biographie de l'auteur*/
+    .matt{
+        border: 2px solid white;
+        width: 200px;
+    }
+    /* On met une image dans une balise Figure 
+    afin qu'elle soit mieux référencée dans les moteurs de recherche*/
+    aside{
+        color: white;
+        background: blueviolet;
+        display: flex;
+        flex-direction: column;    
+        padding: 20px 40px 10px 40px;
+        margin: 90px 30px 20px 0px;
+    }
+    figcaption{
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 1.7em;
+        font-weight: bolder;
+    }
+    aside p{
+        text-align: justify;
+    }
+    h4{
+        font-style: italic;
+        font-size: 1em;
+    }
+    /*Contient les améliorations du pied de page tels que la couleur de la police,
+    la trame de fond et la forme de la police*/
+    footer{
+        color: white;
+        background-color: rgb(84, 6, 158);
+        font-weight: bold;
+        padding: 5px;    
+    }
+
+    /* Méthode pour rendre la page responsive, le contenu s'adaptera suivant la taille de lécran */
+    @media only screen and (max-width: 600px) {
+        #wrapper {
+            background-color: rgb(236, 243, 245);    /*Pour changer la couleur de fond*/
+    }
+    /* Pour changer la position des bloc*/
+    main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .matt{
+        width: 100%;
+    }
+    /* Pour faire disparaitre une image au moment du basculement (vers plus petit) écran mobile */
+    .bloc{
+        display: none;
+    }
+    h3{
+        display: none;
+    }
+    /* Pour changer la forme du menu et centrer les liens de navigation*/
+    ul,
+    h1{
+        display: flex;
+        flex-direction: column; 
+        text-align: center;  
+    }
+    a{
+        font-size: 1em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    article{
+        padding-right: 40px;
+        font-size: 1em;
+    }
+    figcaption{
+    padding-bottom: 0px;
+    font-size: 2em;
+    }
+    aside{
+        margin-left: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* Pour ajouter de l'espace entre les éléments*/
+    p {
+        margin-bottom: 20px;  
+    }
+   section{
+    display: flex;
+    flex-direction: column;
+   } 
+}
+
+@media only screen and (max-width: 900px) {
+    #wrapper {
+        background-color: lightblue;    /*Pour changer la couleur de fond*/
+}
+/* Pour changer la position des bloc*/
+main{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.matt{
+    width: 100%;
+}
+/* Pour faire disparaitre une image au moment du basculement (vers plus petit) écran mobile */
+.bloc{
+    display: none;
+}
+/* Pour changer la forme du menu et centrer les liens de navigation*/
+ul,
+h1{
+    display: flex;
+    flex-direction: column; 
+    text-align: center;  
+}
+article{
+    padding-right: 40px;
+}
+aside{
+    margin-left: 30px;
+}
+/* Pour ajouter de l'espace entre les éléments*/
+p {
+    margin-bottom: 20px;  
+}
+figcaption{
+    padding-bottom: 0px;
+    font-size: 2em;
+}
+h2{
+    padding-bottom: 20px;
+}
+section{
+display: flex;
+flex-direction: column;
+} 
+}
+
+
+   
